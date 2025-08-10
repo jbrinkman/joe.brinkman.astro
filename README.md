@@ -1,11 +1,9 @@
-# 🚀 AstroWind
+# 🚀 Astro Blog Migration
 
 <img src="https://raw.githubusercontent.com/arthelokyo/.github/main/resources/astrowind/lighthouse-score.png" align="right"
      alt="AstroWind Lighthouse Score" width="100" height="358">
 
-🌟 _Most *starred* & *forked* Astro theme in 2022, 2023 & 2024_. 🌟
-
-**AstroWind** is a free and open-source template to make your website using **[Astro 5.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
+**Astro Blog Migration** is a modern blog built with **[Astro 5.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)** using the **AstroWind** template. This project migrates content from a Hexo-based blog to a modern Astro-powered website with enhanced performance and developer experience.
 
 - ✅ **Production-ready** scores in **PageSpeed Insights** reports.
 - ✅ Integration with **Tailwind CSS** supporting **Dark mode** and **_RTL_**.
@@ -50,25 +48,21 @@
 
 <br>
 
-## Demo
+## Project Overview
 
-📌 [https://astrowind.vercel.app/](https://astrowind.vercel.app/)
+This project migrates a blog from Hexo to Astro, leveraging the AstroWind template for a modern, performant website. The migration includes:
 
-<br>
+- Content migration from Hexo markdown files
+- Modern Astro-based architecture
+- Enhanced SEO and performance
+- Responsive design with Tailwind CSS
+- Dark mode support
 
-## 🔔 Upcoming: AstroWind 2.0 – We Need Your Vision!
-
-We're embarking on an exciting journey with **AstroWind 2.0**, and we want you to be a part of it! We're currently taking the first steps in developing this new version and your insights are invaluable. Join the discussion and share your feedback, ideas, and suggestions to help shape the future of **AstroWind**. Let's make **AstroWind 2.0** even better, together!
-
-[Share Your Feedback in Our Discussion!](https://github.com/arthelokyo/astrowind/discussions/392)
-
-<br>
-
-
-## TL;DR
+## Getting Started
 
 ```shell
-npm create astro@latest -- --template arthelokyo/astrowind
+npm install
+npm run dev
 ```
 
 ## Getting started
