@@ -8,7 +8,7 @@
   - Configure repository settings for future GitHub Pages deployment
   - _Requirements: 6.1_
 
-- [ ] 2. Initialize Astro project with AstroWind template
+- [x] 2. Initialize Astro project with AstroWind template
   - Clone the AstroWind template from <https://github.com/arthelokyo/astrowind>
   - Initialize the project with npm and install dependencies
   - Verify the template builds and runs correctly
