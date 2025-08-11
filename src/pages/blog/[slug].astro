@@ -5,7 +5,7 @@ import { getCollection, render } from 'astro:content'
 import Layout from '~/layouts/PageLayout.astro'
 import SinglePost from '~/components/blog/SinglePost.astro'
 
-import { cleanSlug, getPermalink } from '~/utils/permalinks'
+import { cleanSlug } from '~/utils/permalinks'
 
 export const prerender = true
 
@@ -20,18 +20,18 @@ export const getStaticPaths = (async () => {
     const slug = cleanSlug(post.id)
     return {
       params: { slug },
-      props: { post, collection: post.collection },
+      props: { post },
     }
   })
 }) satisfies GetStaticPaths
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>
 
-const { post, collection } = Astro.props
+const { post } = Astro.props
 const { Content } = await render(post)
 
 // Normalize post data to handle both blog and post collections
-const normalizePostData = (post: any, collection: string) => {
+const normalizePostData = (post: any) => {
   const data = post.data
 
   // Handle date fields - blog collection uses 'date', post collection uses 'publishDate'
@@ -63,7 +63,7 @@ const normalizePostData = (post: any, collection: string) => {
   }
 }
 
-const normalizedPost = normalizePostData(post, collection)
+const normalizedPost = normalizePostData(post)
 
 // Create metadata for the page
 const metadata = {
