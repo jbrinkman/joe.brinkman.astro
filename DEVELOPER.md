@@ -24,6 +24,31 @@ cd astro-blog
 npm install
 ```
 
+### Migration Scripts
+
+This project includes scripts for migrating content from Hexo to Astro:
+
+- `scripts/migrate-hexo.js` - Main migration script that converts Hexo posts to Astro format
+- `scripts/fix-image-refs.js` - Utility script to fix image references in migrated content
+
+#### Running Migration
+
+```bash
+# Run the main migration script
+node scripts/migrate-hexo.js
+
+# Fix image references (if needed)
+node scripts/fix-image-refs.js
+```
+
+The migration script:
+
+- Reads Hexo markdown files from the configured source directory
+- Converts frontmatter from Hexo to Astro format
+- Preserves categories, tags, and dates
+- Copies associated images to Astro assets directory
+- Updates image references in content
+
 ### Development Commands
 
 ```bash
