@@ -39,7 +39,7 @@
   - Commit blog page implementation to Git
   - _Requirements: 4.4, 3.4_
 
-- [-] 5.1. Clean up unnecessary template pages
+- [x] 5.1. Clean up unnecessary template pages
   - Remove demo home pages (homes/ directory)
   - Remove landing page demos (landing/ directory)  
   - Remove pricing and services pages not needed for blog
@@ -48,7 +48,7 @@
   - Commit cleanup changes to Git
   - _Requirements: 2.1_
 
-- [ ] 6. Build essential static pages
+- [-] 6. Build essential static pages
   - Create Home page with recent posts listing
   - Implement Archive page with chronological post listing and pagination
   - Create About page with static content
