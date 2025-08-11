@@ -15,7 +15,7 @@
   - Commit initial template setup to Git
   - _Requirements: 1.1, 1.2, 1.3_
 
-- [ ] 3. Configure project structure and content collections
+- [x] 3. Configure project structure and content collections
   - Set up Astro content collections configuration for blog posts
   - Define TypeScript schema for blog post frontmatter (title, date, categories, tags, etc.)
   - Create the content/blog directory structure
@@ -23,7 +23,7 @@
   - Commit content collection setup to Git
   - _Requirements: 4.2, 4.3_
 
-- [ ] 4. Create migration script for Hexo content
+- [x] 4. Create migration script for Hexo content
   - Write Node.js script to read Hexo markdown files from source directory
   - Parse Hexo frontmatter and convert to Astro-compatible format
   - Handle date conversion, categories, and tags preservation

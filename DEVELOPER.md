@@ -63,7 +63,46 @@ src/
 
 ## Content Management
 
-Blog posts are stored in `src/content/post/` as Markdown or MDX files. The content collection is configured in `src/content/config.ts`.
+The project uses Astro Content Collections for managing blog content with two collections:
+
+### Collections
+
+1. **Legacy Post Collection** (`src/data/post/`)
+   - Contains existing AstroWind template posts
+   - Used by current blog pages and components
+   - Schema supports basic blog metadata
+
+2. **Blog Collection** (`src/content/blog/`)
+   - New collection for migrated Hexo content
+   - Enhanced schema with Hexo-compatible fields
+   - Supports categories, tags, and multiple date formats
+
+### Content Schema
+
+The blog collection schema supports:
+
+- **Hexo compatibility**: `date`, `categories[]`, `tags[]`, `published`
+- **Astro conventions**: `publishDate`, `updateDate`, `draft`
+- **SEO metadata**: `title`, `description`, `excerpt`, `image`
+- **Content organization**: Multiple categories and tags as arrays
+
+### Adding Content
+
+Create new blog posts in `src/content/blog/` with frontmatter:
+
+```yaml
+---
+title: "Your Post Title"
+description: "Post description for SEO"
+date: 2024-01-15
+categories: ["Technology", "Web Development"]
+tags: ["astro", "blog", "migration"]
+draft: false
+published: true
+---
+```
+
+Content collections are configured in `src/content/config.ts` with TypeScript schemas for validation.
 
 ## Styling
 

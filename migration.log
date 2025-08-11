@@ -1,0 +1,40 @@
+[2025-08-10T18:19:48.085Z] Starting Hexo to Astro migration...
+[2025-08-10T18:19:48.090Z] Source: /Users/jbrinkman/projects/joe.brinkman.hexo/source/_posts
+[2025-08-10T18:19:48.094Z] Target: ./src/content/blog
+[2025-08-10T18:19:48.098Z] Found 22 Hexo posts to migrate
+[2025-08-10T18:19:48.108Z] ✓ Migrated: Bits-and-Bytes-2022-1.md -> bits-and-bytes-2022-1.md
+[2025-08-10T18:19:48.134Z] ✓ Migrated: Bits-and-Bytes-2022-10.md -> bits-and-bytes-2022-10.md
+[2025-08-10T18:19:48.143Z] ✓ Migrated: Bits-and-Bytes-2022-11.md -> bits-and-bytes-2022-11.md
+[2025-08-10T18:19:48.153Z] ✓ Migrated: Bits-and-Bytes-2022-12.md -> bits-and-bytes-2022-12.md
+[2025-08-10T18:19:48.160Z] ✓ Migrated: Bits-and-Bytes-2022-13.md -> bits-and-bytes-2022-13.md
+[2025-08-10T18:19:48.167Z] ✓ Migrated: Bits-and-Bytes-2022-2.md -> bits-and-bytes-2022-2.md
+[2025-08-10T18:19:48.172Z] ✓ Migrated: Bits-and-Bytes-2022-3.md -> bits-and-bytes-2022-3.md
+[2025-08-10T18:19:48.181Z] ✓ Migrated: Bits-and-Bytes-2022-4.md -> bits-and-bytes-2022-4.md
+[2025-08-10T18:19:48.199Z] ✓ Migrated: Bits-and-Bytes-2022-5.md -> bits-and-bytes-2022-5.md
+[2025-08-10T18:19:48.207Z] ✓ Migrated: Bits-and-Bytes-2022-6.md -> bits-and-bytes-2022-6.md
+[2025-08-10T18:19:48.213Z] ✓ Migrated: Bits-and-Bytes-2022-7.md -> bits-and-bytes-2022-7.md
+[2025-08-10T18:19:48.218Z] ✓ Migrated: Bits-and-Bytes-2022-8.md -> bits-and-bytes-2022-8.md
+[2025-08-10T18:19:48.226Z] ✓ Migrated: Bits-and-Bytes-2022-9.md -> bits-and-bytes-2022-9.md
+[2025-08-10T18:19:48.236Z] ✓ Migrated: Bits-and-Bytes-2023-1.md -> bits-and-bytes-2023-1.md
+[2025-08-10T18:19:48.243Z] ✓ Migrated: Bits-and-Bytes-2023-2.md -> bits-and-bytes-2023-2.md
+[2025-08-10T18:19:48.249Z] ✓ Migrated: Bits-and-Bytes-2023-3.md -> bits-and-bytes-2023-3.md
+[2025-08-10T18:19:48.253Z] ✓ Migrated: a-new-beginning.md -> a-new-beginning.md
+[2025-08-10T18:19:48.260Z] ✓ Migrated: evolving-with-agentic-ai.md -> evolving-with-agentic-ai.md
+[2025-08-10T18:19:48.268Z] ✓ Migrated: my-next-great-adventure.md -> my-next-great-adventure.md
+[2025-08-10T18:19:48.272Z] ✓ Migrated: rock-climbing-career.md -> rock-climbing-career.md
+[2025-08-10T18:19:48.278Z] ✓ Migrated: serverless-blogs-revisited.md -> serverless-blogs-revisited.md
+[2025-08-10T18:19:48.283Z] ✓ Migrated: serverless-blogs.md -> serverless-blogs.md
+[2025-08-10T18:19:48.285Z] 
+=== Migration Summary ===
+[2025-08-10T18:19:48.286Z] Total files processed: 22
+[2025-08-10T18:19:48.288Z] Successfully migrated: 22
+[2025-08-10T18:19:48.290Z] Failed: 0
+[2025-08-10T18:19:48.293Z] 
+=== Content Statistics ===
+[2025-08-10T18:19:48.297Z] Categories found: 0
+[2025-08-10T18:19:48.301Z] Tags found: 111
+[2025-08-10T18:19:48.303Z]   Tags: Link Blog, Development, MacOS, .Net, SOLID, NestJS, NodeJS, TypeScript, Azure, Astro, GraphQL, Markdown, Obsidian, PowerShell, CSS, Design Thinking, GitHub, Docker, Culture, Leadership, Tailwind, DevTools, Improving Talks, C#, Javascript, Scrum, Git, Web Components, Firebase, Kubernetes, AI, ML, Regex, Github, Cloudinary, Alpine.JS, JWT, Prettier, VS Code, Kafka, LINQ, Open Source, Azure Cosmos, Photoshop, CQRS, Clean Architecture, DevOps, Terraform, Career, CommonJS, ESM, Mediatr, Auth, Automation, WebAssembly, Identity, Serverless, Cloud Native, Pub/Sub, Messaging, React, Blazor, Webassembly, Chrome Extensions, Axios, Entity Framework Core, PowerApps, Bootstrap, Vue, Typescript, Maui, Static Site Generator, Agile, Entity Framework, .NET, GPT-4, OpenAI, PDF, GitHub Copilot, Angular, Hacking, SQL, AI Agents, Cloud Computing, Azure Cosmos DB, Shell Commands, Containerization, Command Line Tools, Mentorship, Storytelling, Chat GPT, Decorators, npm, jq, A.I Art, Azure AD, Identity Governance, Microsoft Graph Powershell, .NET MAUI, Dapper, JavaScript, DNN, Auth0, Improving, serverless, github, ci/cd, blog, hexo, static site generator, Blog
+[2025-08-10T18:19:48.305Z] Date range: 2017-10-14 to 2025-07-29
+[2025-08-10T18:19:48.309Z] 
+Migration completed!
+[2025-08-10T18:19:48.312Z] Log file: ./migration.log
