@@ -189,7 +189,10 @@ const publishDate = data.publishDate || data.date || new Date();
 const categories = data.categories || (data.category ? [data.category] : []);
 
 // Normalizes tags to object format
-const tags = tags.map((tag: string) => ({ slug: cleanSlug(tag), title: tag }));
+const tags = (data.tags || []).map((tag: string) => ({
+  slug: cleanSlug(tag),
+  title: tag,
+}));
 ```
 
 ### Enhanced SinglePost Component

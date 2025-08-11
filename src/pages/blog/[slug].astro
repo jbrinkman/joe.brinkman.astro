@@ -31,7 +31,7 @@ const { post } = Astro.props
 const { Content } = await render(post)
 
 // Normalize post data to handle both blog and post collections
-const normalizePostData = (post: any) => {
+const normalizePostData = (post: unknown) => {
   const data = post.data
 
   // Handle date fields - blog collection uses 'date', post collection uses 'publishDate'
