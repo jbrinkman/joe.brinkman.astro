@@ -6,7 +6,7 @@ categories: []
 tags:
   - Career
   - Improving
-image: rock-climbing.jpeg
+image: "~/assets/images/blog/rock-climbing.jpeg"
 draft: false
 published: true
 ---

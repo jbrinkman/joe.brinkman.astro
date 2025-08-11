@@ -1,0 +1,95 @@
+---
+import type { InferGetStaticPropsType, GetStaticPaths } from 'astro'
+import { getCollection, render } from 'astro:content'
+
+import Layout from '~/layouts/PageLayout.astro'
+import SinglePost from '~/components/blog/SinglePost.astro'
+
+import { cleanSlug, getPermalink } from '~/utils/permalinks'
+
+export const prerender = true
+
+export const getStaticPaths = (async () => {
+  // Get posts from both collections
+  const blogPosts = await getCollection('blog')
+  const posts = await getCollection('post')
+
+  const allPosts = [...blogPosts, ...posts]
+
+  return allPosts.map((post) => {
+    const slug = cleanSlug(post.id)
+    return {
+      params: { slug },
+      props: { post, collection: post.collection },
+    }
+  })
+}) satisfies GetStaticPaths
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>
+
+const { post, collection } = Astro.props
+const { Content } = await render(post)
+
+// Normalize post data to handle both blog and post collections
+const normalizePostData = (post: any, collection: string) => {
+  const data = post.data
+
+  // Handle date fields - blog collection uses 'date', post collection uses 'publishDate'
+  const publishDate = data.publishDate || data.date || new Date()
+  const updateDate = data.updateDate || data.updated
+
+  // Handle categories and tags
+  const categories = data.categories || (data.category ? [data.category] : [])
+  const tags = data.tags || []
+
+  const slug = cleanSlug(post.id)
+
+  return {
+    id: post.id,
+    slug,
+    permalink: `/blog/${slug}`,
+    title: data.title,
+    description: data.description || data.excerpt,
+    excerpt: data.excerpt || data.description,
+    publishDate: new Date(publishDate),
+    updateDate: updateDate ? new Date(updateDate) : undefined,
+    categories,
+    tags: tags.map((tag: string) => ({ slug: cleanSlug(tag), title: tag })),
+    category: categories.length > 0 ? { slug: cleanSlug(categories[0]), title: categories[0] } : undefined,
+    author: data.author,
+    image: data.image,
+    draft: data.draft || false,
+    Content,
+  }
+}
+
+const normalizedPost = normalizePostData(post, collection)
+
+// Create metadata for the page
+const metadata = {
+  title: normalizedPost.title,
+  description: normalizedPost.description,
+  canonical: Astro.url.pathname,
+  openGraph: {
+    type: 'article',
+    ...(normalizedPost.image && {
+      images: [
+        {
+          url: normalizedPost.image,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    }),
+  },
+  twitter: {
+    cardType: normalizedPost.image ? 'summary_large_image' : 'summary',
+  },
+}
+---
+
+<Layout metadata={metadata}>
+  <SinglePost post={normalizedPost} url={Astro.url}>
+    <Content />
+  </SinglePost>
+</Layout>

@@ -8,7 +8,7 @@ tags: ["astro", "blog", "migration", "hexo"]
 draft: false
 published: true
 author: "Joe Brinkman"
-image: "/images/sample-post.jpg"
+image: "~/assets/images/default.png"
 excerpt: "A sample blog post to validate our content collections schema works correctly with Hexo-compatible frontmatter."
 ---
 

@@ -27,7 +27,7 @@ excerpt: >-
 description: >-
   Bits and Bytes is my list of interesting videos and code projects that I've
   found on my software journey. Edition 2022-3
-image: b-n-b.jpg
+image: "~/assets/images/blog/b-n-b.jpg"
 draft: false
 published: true
 ---

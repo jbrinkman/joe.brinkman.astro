@@ -9,6 +9,19 @@ This project is built with Astro 5.0 and uses the AstroWind template as its foun
 - **TypeScript**: Type-safe JavaScript development
 - **MDX**: Enhanced markdown with component support
 
+### Blog Architecture
+
+The blog system supports dual content collections:
+
+- **Legacy Collection** (`src/data/post/`): Original AstroWind posts
+- **Blog Collection** (`src/content/blog/`): Migrated Hexo content with enhanced schema
+
+#### Dynamic Blog Pages
+
+- **Individual Posts**: `src/pages/blog/[slug].astro` - Handles both collections
+- **Post Layout**: `src/components/blog/SinglePost.astro` - Enhanced with categories support
+- **Content Collections**: `src/content/config.ts` - Dual schema configuration
+
 ## Development Setup
 
 ### Prerequisites
@@ -145,3 +158,62 @@ This project was initialized from the AstroWind template and is being configured
 2. URL structure preservation
 3. Asset migration
 4. SEO metadata preservation
+
+## Blog Implementation Details
+
+### Content Collections
+
+The project uses two content collections:
+
+1. **Post Collection** (`post`): Legacy AstroWind posts from `src/data/post/`
+2. **Blog Collection** (`blog`): Migrated Hexo content from `src/content/blog/`
+
+### Dynamic Blog Post Pages
+
+The `src/pages/blog/[slug].astro` file handles rendering for both collections:
+
+- Automatically generates static paths for all posts
+- Normalizes data between different collection schemas
+- Handles Hexo-specific fields (categories array, multiple date formats)
+- Provides proper SEO metadata and Open Graph tags
+
+### Post Data Normalization
+
+The blog page normalizes data from both collections:
+
+```typescript
+// Handles both Hexo and Astro date conventions
+const publishDate = data.publishDate || data.date || new Date();
+
+// Converts categories to consistent format
+const categories = data.categories || (data.category ? [data.category] : []);
+
+// Normalizes tags to object format
+const tags = tags.map((tag: string) => ({ slug: cleanSlug(tag), title: tag }));
+```
+
+### Enhanced SinglePost Component
+
+The `SinglePost` component has been enhanced to display:
+
+- Categories as clickable tags (when available)
+- Tags with proper linking
+- Proper metadata (author, date, reading time)
+- Social sharing buttons
+- Responsive image handling
+
+### Testing Blog Posts
+
+To test blog post rendering:
+
+```bash
+# Build the site
+npm run build
+
+# Check generated pages in dist/blog/
+ls dist/blog/
+
+# Start development server
+npm run dev
+# Visit http://localhost:4321/blog/[post-slug]
+```
