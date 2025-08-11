@@ -6,7 +6,7 @@ categories: []
 tags:
   - DNN
   - Career
-image: markus-spiske-code.jpeg
+image: "~/assets/images/blog/markus-spiske-code.jpeg"
 draft: false
 published: true
 ---

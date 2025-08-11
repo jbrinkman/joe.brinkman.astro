@@ -31,7 +31,7 @@
   - Commit migration script and migrated content to Git
   - _Requirements: 4.1, 4.2, 4.3, 4.4, 3.4_
 
-- [ ] 5. Implement core blog pages
+- [-] 5. Implement core blog pages
   - Create dynamic blog post pages using [slug].astro
   - Implement blog post layout with proper metadata display
   - Add support for categories and tags display on individual posts

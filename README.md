@@ -13,6 +13,9 @@
 - ✅ **Tags & Categories Preservation** - 111+ tags preserved from original blog
 - ✅ **Date Format Handling** - Multiple Hexo date formats properly converted
 - ✅ **Content Validation** - All migrated content builds successfully
+- ✅ **Dynamic Blog Pages** - Individual blog post pages with proper metadata display
+- ✅ **Categories & Tags Display** - Support for both categories and tags on individual posts
+- ✅ **Dual Collection Support** - Handles both legacy AstroWind posts and migrated Hexo content
 
 - ✅ **Production-ready** scores in **PageSpeed Insights** reports.
 - ✅ Integration with **Tailwind CSS** supporting **Dark mode** and **_RTL_**.

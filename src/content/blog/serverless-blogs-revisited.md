@@ -30,7 +30,7 @@ description: >-
   is, blog content is fairly static. Once written, a blog really shouldn't
   change except for rare occurances where you need to fix typos or to correct
   mis-statements.
-image: kaushik-panchal-clouds.jpeg
+image: "~/assets/images/blog/kaushik-panchal-clouds.jpeg"
 draft: false
 published: true
 ---
