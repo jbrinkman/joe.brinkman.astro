@@ -69,6 +69,8 @@ This project migrates a blog from Hexo to Astro, leveraging the AstroWind templa
 - Enhanced SEO and performance
 - Responsive design with Tailwind CSS
 - Dark mode support
+- Simplified navigation focused on essential blog pages (Home, Blog, About, Contact)
+- Cleaned up template removing unnecessary demo pages
 
 ## Getting Started
 

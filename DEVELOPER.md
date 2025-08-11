@@ -93,11 +93,34 @@ src/
 │   └── widgets/    # Page section widgets
 ├── content/        # Content collections (blog posts)
 ├── layouts/        # Page layout templates
-├── pages/          # File-based routing
+├── pages/          # File-based routing (cleaned up)
+│   ├── [...blog]/  # Dynamic blog routing
+│   ├── blog/       # Individual blog posts
+│   ├── index.astro # Home page
+│   ├── about.astro # About page
+│   ├── contact.astro # Contact page
+│   └── ...         # Essential pages only
 ├── utils/          # Utility functions
 ├── config.yaml     # Site configuration
-└── navigation.ts   # Navigation configuration
+└── navigation.ts   # Simplified navigation configuration
 ```
+
+### Page Structure Changes
+
+The project has been cleaned up to focus on essential blog functionality:
+
+**Removed Pages:**
+
+- `src/pages/homes/` - Demo home page variants
+- `src/pages/landing/` - Landing page demos
+- `src/pages/pricing.astro` - Pricing page
+- `src/pages/services.astro` - Services page
+
+**Retained Pages:**
+
+- Essential blog pages (Home, Blog, About, Contact)
+- Legal pages (Terms, Privacy)
+- Dynamic blog routing for posts, categories, and tags
 
 ## Content Management
 
@@ -152,12 +175,31 @@ The project uses Tailwind CSS for styling with custom configurations in:
 
 ## Migration Notes
 
-This project was initialized from the AstroWind template and is being configured for blog migration from Hexo. Key migration tasks include:
+This project was initialized from the AstroWind template and has been configured for blog migration from Hexo. Key migration tasks completed:
 
-1. Content structure adaptation
-2. URL structure preservation
-3. Asset migration
-4. SEO metadata preservation
+1. ✅ Content structure adaptation
+2. ✅ URL structure preservation
+3. ✅ Asset migration
+4. ✅ SEO metadata preservation
+5. ✅ Template cleanup - removed unnecessary demo pages
+6. ✅ Navigation simplification for blog focus
+
+### Navigation Changes
+
+The navigation has been simplified to focus on essential blog functionality:
+
+**Header Navigation:**
+
+- Home
+- Blog
+- About
+- Contact
+
+**Footer Navigation:**
+
+- Simplified to single column with essential links
+- Updated GitHub repository reference
+- Personalized footer note
 
 ## Blog Implementation Details
 
